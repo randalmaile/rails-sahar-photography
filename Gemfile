@@ -36,3 +36,43 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem 'cancan'
+gem 'devise'
+gem 'figaro'
+gem 'haml-rails'
+gem 'pg'
+gem 'rolify'
+gem 'sendgrid'
+gem 'simple_form'
+gem 'therubyracer', :platform=>:ruby
+
+group :assets do
+  gem 'compass-rails', '~> 1.0.3'
+  gem 'zurb-foundation', '~> 4.3.2'
+end
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
+  gem 'html2haml'
+  gem 'hub', :require=>nil
+  gem 'quiet_assets'
+  gem 'rails_layout'
+end
+
+group :development, :test do
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
+end
+
+group :production do
+  gem 'thin'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner', '1.0.1'
+  gem 'email_spec'
+end
+

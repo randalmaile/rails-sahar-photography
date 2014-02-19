@@ -1,0 +1,40 @@
+!!!
+%html
+  %head
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+    %title= content_for?(:title) ? yield(:title) : 'Saharphotography'
+    %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Saharphotography'}"}
+    = stylesheet_link_tag "application", params[:controller], :media => "all"
+    = yield :head
+    -#  Modernizr is required for Zurb Foundation
+    = javascript_include_tag "vendor/custom.modernizr"
+    = javascript_include_tag "application", params[:controller]
+    = csrf_meta_tags
+  %body
+    .row
+      .large-12.columns
+        = render 'layouts/navigation'
+    %main{:role => "main"}
+      = render 'layouts/messages'
+      = yield
+      / Footer
+    %footer.row
+      .large-12.columns
+        %hr/
+        .row
+          .large-6.columns
+            %p © Copyright no one at all. Go to town.
+          .large-6.columns
+            %ul.inline-list.right
+              %li
+                = link_to "xxx", root_path
+              %li
+                = link_to "xxx", root_path
+              %li
+                = link_to "xxx", root_path
+              %li
+                = link_to "xxx", root_path
+
+
+
+

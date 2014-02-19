@@ -1,0 +1,17 @@
+-# navigation styled for Zurb Foundation 4
+/ Navigation
+%nav.top-bar
+  %ul.title-area
+    / Title Area
+    %li.name
+      %h1
+        %a{href: "#"}
+          Sahar Photography
+    %li.toggle-topbar.menu-icon
+      %a{href: "#"}
+        %span menu
+  %section.top-bar-section
+    %ul.left
+      = render 'layouts/navigation_links'
+    -# %ul.right
+/ End Navigation

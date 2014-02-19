@@ -1,0 +1,45 @@
+= content_for :head do
+  = stylesheet_link_tag 'slickmap'
+.sitemap
+  %h1 Sahar Photography
+  %h2 Preliminary Site Map &#8212; Version 1.0
+  %ul#utilityNav
+    %li
+      %a{href: "/register"} Register
+    %li
+      %a{href: "/login"} Log In
+  %ul#primaryNav.col6
+    %li#home
+      %a{href: "/"} Home
+    %li
+      %a{href: "/gallery"} Gallery
+      %ul
+        %li
+          %a{href: "/xxx"} xxx
+        %li
+          %a{href: "/yyy"} yyy
+        %li
+          %a{href: "/zzz"} zzz
+    %li
+      %a{href: "/services"} Services
+      %ul
+        %li
+          %a{href: "/services/portraiture"} Portraiture
+        %li
+          %a{href: "/services/weddings"} Weddings
+        %li
+          %a{href: "/services/corporate"} Corporate
+    %li
+      %a{href: "/blog"} Blog
+    %li 
+      %a{href: "/contact"} Contact
+      %ul 
+        %li 
+          %a{href: "/photoshot"} Photoshoot
+        %li 
+          %a{href: "/mailing-list"} Mailing list
+    %li
+      %a{href: "/about"} About
+    %li 
+      %a{href: "/store"} Store
+

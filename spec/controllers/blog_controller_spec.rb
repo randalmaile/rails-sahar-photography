@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe PostsController do
+describe BlogController do
 
   describe "GET 'index'" do
     it "returns http success" do

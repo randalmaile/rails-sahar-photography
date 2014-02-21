@@ -1,10 +1,21 @@
 Saharphotography::Application.routes.draw do
+  get "blog/index"
+
+  resources :printorders
+  resources :workorders
+
+  get "admin/index"
+
   get "store/index"
 
-  resources :orders
   resources :carts
-  resources :products
 
+  get "galleries/client"
+
+  get "galleries/portfolio"
+
+  resources :galleries
+  
   get "about/index"
 
   get "contact/index"
@@ -13,17 +24,17 @@ Saharphotography::Application.routes.draw do
 
   get "contact/mailinglist"
 
-  resources :posts
-
   get "services/index"
+  get "services/weddings"
+  get "services/portrait"
+  get "services/corporate"
 
-  resources :galleries
+  
 
   root to: "home#index"
 
   get "home/sitemap"
 
-  get "formstest/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

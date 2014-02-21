@@ -2,7 +2,16 @@ class GalleriesController < ApplicationController
   def index
   end
 
+  def client
+    
+  end
+
+  def portfolio
+
+  end
+
   def show
+
   end
 
   def new

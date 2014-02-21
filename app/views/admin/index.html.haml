@@ -1,0 +1,333 @@
+
+%h2 Dashboard
+%h3 Galleries
+.row
+  .section-container.tabs{"data-section" => "tabs"}
+    %section.active
+      %p.title{"data-section-title" => ""}
+        %a{href: "#"} Client
+      .content{"data-section-content" => ""}
+        %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
+          %caption
+            Client
+          %thead
+            %tr
+              %th{scope: "col"} Client Name
+              %th{scope: "col"} Thumbnail
+              %th{scope: "col"} Type
+              %th{scope: "col"} # of images
+              %th{scope: "col"} Date Added
+              %th{scope: "col"} Published?
+              %th{scope: "col"} Comments
+              %th{scope: "col"} &#160;
+              %th{scope: "col"} &#160;
+              %th{scope: "col"} &#160;
+          %tbody
+            %tr
+              %td John Doe
+              %td thumbnail.jpg
+              %td Wedding
+              %td 33
+              %td 1/11/2011
+              %td Yes
+              %td Comments....
+              %td 
+                %a.tiny.button.success{href: "#"} Publish
+              %td 
+                %a.tiny.button.success{href: "#"} Edit
+              %td
+                %a.tiny.button.alert{href: "#"} Delete
+            %tr
+              %td Jane Doe
+              %td thumbnail.jpg
+              %td Portraiture
+              %td 100
+              %td 2/12/2014
+              %td No
+              %td comments...
+              %td 
+                %a.tiny.button.success{href: "#"} Publish
+              %td 
+                %a.tiny.button.success{href: "#"} Edit
+              %td
+                %a.tiny.button.alert{href: "#"} Delete
+            %tr
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+        = link_to "Create new Gallery", new_gallery_path, class: "small button success"
+    %section
+      %p.title{"data-section-title" => ""}
+        %a{href: "#"} Portfolio
+      .content{"data-section-content" => ""}
+        %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
+          %caption
+            Portfolio
+          %thead
+            %tr
+              %th{scope: "col"} Name
+              %th{scope: "col"} Thumbnail
+              %th{scope: "col"} # of images
+              %th{scope: "col"} Date Added
+              %th{scope: "col"} Published?
+              %th{scope: "col"} Comments
+              %th{scope: "col"} &#160;
+              %th{scope: "col"} &#160;
+              %th{scope: "col"} &#160;
+          %tbody
+            %tr
+              %td XYZ
+              %td thumbnail.jpb
+              %td 33
+              %td 1/11/2011
+              %td Yes
+              %td One Awesome gallery
+              %td 
+                %a.tiny.button.success{href: "#"} Publish
+              %td 
+                %a.tiny.button.success{href: "#"} Edit
+              %td
+                %a.tiny.button.alert{href: "#"} Delete
+          %tbody
+        = link_to "Create new Gallery", new_gallery_path, class: "small button success"
+%hr/ 
+%h3 Work Orders
+.row
+  .section-container.tabs{"data-section" => "tabs"}
+    %section.active
+      %p.title{"data-section-title" => ""}
+        %a{href: "#"} Active
+      .content{"data-section-content" => ""}
+        %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
+          %caption
+            Active
+          %thead
+            %tr
+              %th{scope: "col"} Name
+              %th{scope: "col"} Email
+              %th{scope: "col"} Address
+              %th{scope: "col"} Phone
+              %th{scope: "col"} Description
+              %th{scope: "col"} Job Type
+              %th{scope: "col"} Status
+              %th{scope: "col"} Date Opened
+              %th{scope: "col"} Comments
+              %th{scope: "col"} &#160;
+              %th{scope: "col"} &#160;
+              %th{scope: "col"} &#160;
+          %tbody
+            %tr
+              %td John Doe
+              %td jonhdoe@email.com
+              %td 33 abc st.
+              %td 555-555-5555
+              %td asf asdkfasdf
+              %td Wedding
+              %td Intake completed; Work Completed; Payment Received
+              %td 1/11/2011
+              %td comments....
+              %td 
+                %a.tiny.button.success{href: "#"} Send Invoice
+              %td 
+                %a.tiny.button.success{href: "#"} Edit
+              %td
+                %a.tiny.button.alert{href: "#"} Delete
+            %tr
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+            %tr
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+        = link_to "Create new Work Order", new_workorder_path, class: "small button success"
+    %section
+      %p.title{"data-section-title" => ""}
+        %a{href: "#"} Completed
+      .content{"data-section-content" => ""}
+        %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
+          %caption
+            Completed
+          %thead
+            %tr
+              %th{scope: "col"} Name
+              %th{scope: "col"} Email
+              %th{scope: "col"} Address
+              %th{scope: "col"} Phone
+              %th{scope: "col"} Description
+              %th{scope: "col"} Job Type
+              %th{scope: "col"} Status
+              %th{scope: "col"} Date Opened
+              %th{scope: "col"} Comments
+              %th{scope: "col"} &#160;
+              %th{scope: "col"} &#160;
+              %th{scope: "col"} &#160;
+          %tbody
+            %tr
+              %td John Doe
+              %td jonhdoe@email.com
+              %td 33 abc st.
+              %td 555-555-5555
+              %td asf asdkfasdf
+              %td Wedding
+              %td Intake completed; Work Completed; Payment Received
+              %td 1/11/2011
+              %td comments....
+              %td 
+                %a.tiny.button.success{href: "#"} Reactivate
+              %td 
+                %a.tiny.button.success{href: "#"} Edit
+              %td
+                %a.tiny.button.alert{href: "#"} Delete
+            %tr
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+            %tr
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+%h3 Print Orders
+.row
+  .section-container.tabs{"data-section" => "tabs"}
+    %section.active
+      %p.title{"data-section-title" => ""}
+        %a{href: "#"} Active
+      .content{"data-section-content" => ""}
+        %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
+          %caption
+            Active
+          %thead
+            %tr
+              %th{scope: "col"} Name
+              %th{scope: "col"} Email
+              %th{scope: "col"} Address
+              %th{scope: "col"} Phone
+              %th{scope: "col"} Description
+              %th{scope: "col"} Job Type
+              %th{scope: "col"} Status
+              %th{scope: "col"} Date Opened
+              %th{scope: "col"} Comments
+              %th{scope: "col"} &#160;
+              %th{scope: "col"} &#160;
+              %th{scope: "col"} &#160;
+          %tbody
+            %tr
+              %td John Doe
+              %td jonhdoe@email.com
+              %td 33 abc st.
+              %td 555-555-5555
+              %td asf asdkfasdf
+              %td Wedding
+              %td Intake completed; Work Completed; Payment Received
+              %td 1/11/2011
+              %td comments....
+              %td 
+                %a.tiny.button.success{href: "#"} Process credit card
+              %td 
+                %a.tiny.button.success{href: "#"} Edit
+              %td
+                %a.tiny.button.alert{href: "#"} Delete
+            %tr
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+            %tr
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+        = link_to "Create new Print Order", new_printorder_path, class: "small button success"
+    %section
+      %p.title{"data-section-title" => ""}
+        %a{href: "#"} Completed
+      .content{"data-section-content" => ""}
+        %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
+          %caption
+            Completed
+          %thead
+            %tr
+              %th{scope: "col"} Name
+              %th{scope: "col"} Email
+              %th{scope: "col"} Address
+              %th{scope: "col"} Phone
+              %th{scope: "col"} Description
+              %th{scope: "col"} Job Type
+              %th{scope: "col"} Status
+              %th{scope: "col"} Date Opened
+              %th{scope: "col"} Comments
+              %th{scope: "col"} &#160;
+              %th{scope: "col"} &#160;
+              %th{scope: "col"} &#160;
+          %tbody
+            %tr
+              %td John Doe
+              %td jonhdoe@email.com
+              %td 33 abc st.
+              %td 555-555-5555
+              %td asf asdkfasdf
+              %td Wedding
+              %td Intake completed; Work Completed; Payment Received
+              %td 1/11/2011
+              %td comments....
+              %td 
+                %a.tiny.button.success{href: "#"} Reactivate
+              %td 
+                %a.tiny.button.success{href: "#"} Edit
+              %td
+                %a.tiny.button.alert{href: "#"} Delete
+            %tr
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+            %tr
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+              %td &#160;
+
+

@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe OrderController do
+describe PrintordersController do
 
-  describe "GET 'index'" do
+  describe "GET 'new'" do
     it "returns http success" do
-      get 'index'
+      get 'new'
       response.should be_success
     end
   end
@@ -12,13 +12,6 @@ describe OrderController do
   describe "GET 'show'" do
     it "returns http success" do
       get 'show'
-      response.should be_success
-    end
-  end
-
-  describe "GET 'new'" do
-    it "returns http success" do
-      get 'new'
       response.should be_success
     end
   end

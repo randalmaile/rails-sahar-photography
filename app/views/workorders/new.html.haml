@@ -1,0 +1,60 @@
+%h1 Create a work order
+
+%form
+  %fieldset
+    %legend New work order
+    .row
+      .large-6.columns
+        %label Name
+        %input{type: "text"}/
+    .row
+      .large-6.columns
+        %label Email
+        %input{:type => "text"}/ 
+    .row
+      .large-6.columns
+        %label Address
+        %input{:type => "text"}/ 
+    .row
+      .large-6.columns
+        %label City
+        %input{:type => "text"}/ 
+    .row
+      .large-6.columns
+        %label State, Province, Region
+        %input{:type => "text"}/ 
+    .row
+      .large-6.columns
+        %label Zip
+        %input{:type => "text"}/ 
+    .row
+      .large-7.columns
+        %label Country
+        %input{:type => "text"}/ 
+    .row
+      .large-6.columns
+        %label Phone
+        %input{:type => "text"}/ 
+    .row
+      .large-12.columns
+        %label Description
+        %textarea{placeholder: "Please describe..."}
+    .row
+      .large-4.columns
+        %label{for: "customDropdown1"} Job Type
+        %select#customDropdown1.medium
+          %option Wedding
+          %option Portrait
+    .row
+      .large-12.columns
+        %label Comments
+        %textarea{placeholder: "Any comments...."}
+    .row 
+      .large-3.columns
+        %button{type: "submit"} Create
+
+
+
+
+
+

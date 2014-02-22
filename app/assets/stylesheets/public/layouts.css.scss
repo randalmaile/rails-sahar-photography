@@ -1,3 +1,7 @@
-a.link {
-  color: blue;
-}
+@import "foundation/variables";
+@import "foundation/components/global";
+@import "foundation/components/pagination";
+@import "foundation/components/buttons";
+@import "foundation/components/dropdown-buttons";
+
+/* Insert layout specific sass styles here - need to figure out how to add foundation mixins and variables!!*/

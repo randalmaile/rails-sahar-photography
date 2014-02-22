@@ -3,10 +3,6 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 gem 'rails', '3.2.13'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -17,6 +13,33 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'compass-rails' # you need this or you get an err
+  gem "zurb-foundation", "~> 4.3.2"
+end
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
+  gem 'html2haml'
+  gem 'hub', :require=>nil
+  gem 'quiet_assets'
+  gem 'rails_layout'
+end
+
+group :development, :test do
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
+  gem 'pry-rails'
+end
+
+group :production do
+  gem 'thin'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner', '1.0.1'
+  gem 'email_spec'
 end
 
 gem 'jquery-rails'
@@ -45,34 +68,4 @@ gem 'rolify'
 gem 'sendgrid'
 gem 'simple_form'
 gem 'therubyracer', :platform=>:ruby
-
-group :assets do
-  gem 'compass-rails', '~> 1.0.3'
-  gem 'zurb-foundation', '~> 4.3.2'
-end
-
-group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
-  gem 'html2haml'
-  gem 'hub', :require=>nil
-  gem 'quiet_assets'
-  gem 'rails_layout'
-end
-
-group :development, :test do
-  gem 'factory_girl_rails'
-  gem 'rspec-rails'
-  gem 'pry-rails'
-end
-
-group :production do
-  gem 'thin'
-end
-
-group :test do
-  gem 'capybara'
-  gem 'database_cleaner', '1.0.1'
-  gem 'email_spec'
-end
 

@@ -2,10 +2,10 @@
 %h2 Dashboard
 %h3 Galleries
 .row
-  .section-container.tabs{"data-section" => "tabs"}
+  .section-container.auto{"data-section" => ""}
     %section.active
       %p.title{"data-section-title" => ""}
-        %a{href: "#"} Client
+        %a{href: "#panel1"} Client
       .content{"data-section-content" => ""}
         %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
           %caption
@@ -64,7 +64,7 @@
         = link_to "Create new Gallery", new_gallery_path, class: "small button success"
     %section
       %p.title{"data-section-title" => ""}
-        %a{href: "#"} Portfolio
+        %a{href: "#panel2"} Portfolio
       .content{"data-section-content" => ""}
         %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
           %caption
@@ -99,10 +99,10 @@
 %hr/ 
 %h3 Work Orders
 .row
-  .section-container.tabs{"data-section" => "tabs"}
+  .section-container.auto{"data-section" => ""}
     %section.active
       %p.title{"data-section-title" => ""}
-        %a{href: "#"} Active
+        %a{href: "#panel1"} Active
       .content{"data-section-content" => ""}
         %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
           %caption
@@ -159,7 +159,7 @@
         = link_to "Create new Work Order", new_workorder_path, class: "small button success"
     %section
       %p.title{"data-section-title" => ""}
-        %a{href: "#"} Completed
+        %a{href: "#panel2"} Completed
       .content{"data-section-content" => ""}
         %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
           %caption
@@ -213,12 +213,13 @@
               %td &#160;
               %td &#160;
               %td &#160;
+%hr/ 
 %h3 Print Orders
 .row
-  .section-container.tabs{"data-section" => "tabs"}
+  .section-container.auto{"data-section" => ""}
     %section.active
       %p.title{"data-section-title" => ""}
-        %a{href: "#"} Active
+        %a{href: "#panel1"} Active
       .content{"data-section-content" => ""}
         %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
           %caption
@@ -275,7 +276,7 @@
         = link_to "Create new Print Order", new_printorder_path, class: "small button success"
     %section
       %p.title{"data-section-title" => ""}
-        %a{href: "#"} Completed
+        %a{href: "#panel2"} Completed
       .content{"data-section-content" => ""}
         %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
           %caption

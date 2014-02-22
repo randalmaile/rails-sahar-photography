@@ -1,4 +1,14 @@
 Saharphotography::Application.routes.draw do
+  get "workbench/lightbox"
+
+  get "workbench/slideshow"
+
+  get "workbench/tables"
+
+  get "workbench/buttons"
+
+  get "workbench/index"
+
   get "blog/index"
 
   resources :printorders

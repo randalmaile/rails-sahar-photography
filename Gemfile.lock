@@ -222,7 +222,7 @@ DEPENDENCIES
   cancan
   capybara
   coffee-rails (~> 3.2.1)
-  compass-rails (~> 1.0.3)
+  compass-rails
   database_cleaner (= 1.0.1)
   devise
   email_spec

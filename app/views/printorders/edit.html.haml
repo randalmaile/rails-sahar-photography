@@ -1,2 +1,85 @@
 %h1 Printorders#edit
-%p Find me in app/views/printorders/edit.html.haml
+%form
+  %fieldset
+    %legend Customer Details
+    .row
+      .large-6.columns
+        %label Name
+        %input{type: "text"}/
+    .row
+      .large-6.columns
+        %label Email
+        %input{:type => "text"}/ 
+    .row
+      .large-6.columns
+        %label Address
+        %input{:type => "text"}/ 
+    .row
+      .large-6.columns
+        %label City
+        %input{:type => "text"}/ 
+    .row
+      .large-6.columns
+        %label State, Province, Region
+        %input{:type => "text"}/ 
+    .row
+      .large-6.columns
+        %label Zip
+        %input{:type => "text"}/ 
+    .row
+      .large-7.columns
+        %label Country
+        %input{:type => "text"}/ 
+    .row
+      .large-6.columns
+        %label Phone
+        %input{:type => "text"}/ 
+    .row
+      .large-12.columns
+        %label Customer Notes
+        %textarea{placeholder: "Please describe..."}
+    .row
+      .large-12.columns
+        %label Comments
+        %textarea{placeholder: "Any comments...."}
+%form
+  %fieldset
+    %legend Photoset
+    .row
+      .large-6.columns
+        %label Image
+        %input{type: "text"}/
+    .row
+      .large-6.columns
+        %label Quantity
+        %input{:type => "text"}/ 
+    .row
+      .large-6.columns
+        %label Filename
+        %input{:type => "text"}/ 
+    .row
+      .large-6.columns
+        %label File Size
+        %input{:type => "text"}/ 
+    .row
+      .large-6.columns
+        %label Description
+        %input{:type => "text"}/ 
+    .row
+      .large-6.columns
+        %label Print Size
+        %input{:type => "text"}/ 
+    .row
+      .large-7.columns
+        %label Finish
+        %input{:type => "text"}/ 
+%form
+  %fieldset
+    %legend Shipping Details
+    .row
+      .large-6.columns
+        %label Shipping Method
+        %input{type: "text"}/
+    .row 
+      .large-3.columns
+        %button.small.success{type: "submit"} Save

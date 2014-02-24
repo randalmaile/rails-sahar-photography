@@ -1,2 +1,81 @@
-%h1 Printorders#show
-%p Find me in app/views/printorders/show.html.haml
+.row
+  .large-12.columns
+    %h3 List Order status at top (pending/processed/problems) - INVOICE #
+  .large-6.columns
+    .panel
+      %h5 Bill to:
+      %p 
+        Randal Maile
+        %br/  
+        3469 Bandini Ave
+        %br/ 
+        Riverside, Ca
+        %br/ 
+        92506
+        %br/ 
+        858-717-1052
+
+  .large-6.columns
+    .panel.callout.radius
+      %h5 Ship to:
+      %p 
+        Randal Maile
+        %br/  
+        3469 Bandini Ave
+        %br/ 
+        Riverside, Ca
+        %br/ 
+        92506
+        %br/ 
+        858-717-1052
+.row
+  .small-5.columns
+    %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
+      %caption
+      %tbody 
+        %tr
+          %th{scope: "row"} Invoice #:
+          %td 1110344
+          %tr
+            %th{scope: "row"} Order Date:
+            %td Jan 1, 2014
+  .small-6.small-offset-1.columns
+    %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
+      %caption
+      %tbody 
+        %tr
+          %th{scope: "row"} Order Total:
+          %td $100.40
+          %tr
+            %th{scope: "row"} Order Status:
+            %td Preparing Order
+.row
+  .large-12.columns
+    %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
+      %caption
+      %thead
+        %tr
+          %th{scope: "col"} Image
+          %th{scope: "col"} Quantity
+          %th{scope: "col"} Filename
+          %th{scope: "col"} File Size
+          %th{scope: "col"} Print Size
+          %th{scope: "col"} Finish
+      %tbody
+        %tr
+          %td 
+            %img{src: "http://lorempixel.com/100/100/nature"}/
+          %td 4
+          %td hello.jpg
+          %td 2448X1835
+          %td 5"x7" print
+          %td Matte
+.row
+  .large-12.columns
+    .panel
+      %p 
+        %strong Shipping method:  USPS First-Class Mail (shipped in 2-4 business days)
+      %p Click "Send Order to Printer" below to send this order to the printer. This will notify them that their order is being completed. The printer will expedite the print job and automatically send it to the customer; no further action is necessary on your part. You will be charged by the printer for the wholesale printing cost when the order ships.
+      .large-3.columns
+        %a.button.small.success{:href => "#"} Send order to Printer
+

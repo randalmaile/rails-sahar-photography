@@ -1,0 +1,10 @@
+%li 
+  = link_to "Cart", carts_show_path
+%li.divider.hide-for-small
+%li.has-dropdown
+  %a{href: "#"} Admin
+  %ul.dropdown
+    %li 
+      = link_to "Dashboard", admin_index_path
+    %li
+      = link_to "Client Lightboxes", lightboxes_index_path

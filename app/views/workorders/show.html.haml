@@ -1,2 +1,47 @@
-%h1 Workorders#show
-%p Find me in app/views/workorders/show.html.haml
+%h3 List Work Order status at top (pending/processed/problems) - INVOICE #
+.row
+  .large-6.columns
+    .panel
+      %h5 Customer Information
+      %p 
+        Randal Maile
+        %br/  
+        3469 Bandini Ave
+        %br/ 
+        Riverside, Ca
+        %br/ 
+        USA
+        %br/ 
+        92506
+        %br/ 
+        858-717-1052
+
+  .large-6.columns
+    .panel.callout.radius
+      %h5 This is a callout panel.
+      %p It's a little ostentatious, but useful for important content.
+
+%table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
+  %caption
+  %thead
+    %tr
+      %th{scope: "col"} Date Opened
+      %th{scope: "col"} Job Type
+      %th{scope: "col"} Description
+      %th{scope: "col"} Status
+      %th{scope: "col"} Comments
+      %th{scope: "col"} Quote
+      %th{scope: "col"} &#160;
+      %th{scope: "col"} &#160;
+      %th{scope: "col"} &#160;
+  %tbody
+    %tr
+      %td 1/11/2011
+      %td Wedding
+      %td A wedding with ....
+      %td Payment Pending
+      %td Comments Comments Comments Comments Comments Comments
+      %td $3499.00
+%a.tiny.button.success{href: "#"} Send Invoice
+
+%a.tiny.button.alert{href: "#"} Delete

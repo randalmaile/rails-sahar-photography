@@ -1,2 +1,81 @@
-%h1 Cart#new
-%p Find me in app/views/cart/new.html.haml
+.row
+  .large-12.columns
+    %h1 Cart#New
+.row
+  .large-12.columns
+    %form.custom
+      %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
+        %caption
+        %thead
+          %tr
+            %th{scope: "col"} Thumbnail
+            %th{scope: "col"} Image Name
+            %th{scope: "col"} Description
+            %th{scope: "col"} Finish
+            %th{scope: "col"} Price
+            %th{scope: "col"} Quantity
+            %th{scope: "col"} Total
+            %th{scope: "col"}
+              %label{for: "checkbox1"}
+                %input#checkbox1{style: "display: none;", type: "checkbox"}/
+                %span.custom.checkbox
+                Add all
+            %th{scope: "col"} Remove
+        %tbody
+          %tr
+            %td 
+              %img{:src => "http://lorempixel.com/100/100/nature", :alt => ""}/ 
+            %td thumbnail.jpg
+            %td
+              %select
+                %option 3.5"x5" print (metallic)
+                %option 4"x5" print (metallic)
+                %option 5"x7" print
+            %td 
+              %select
+                %option Metalic
+                %option Glossy
+                %option Matte  
+            %td Price - fn factors the options
+            %td 
+              %input{:type => "text"}/ 
+            %td $2.00
+            %td 
+              %label{for: "checkbox1"}
+                %input#checkbox1{style: "display: none;", type: "checkbox"}/
+                %span.custom.checkbox
+                Add item
+            %td 
+              %a{:href => "#"} Remove
+          %tr
+            %td 
+              %img{:src => "http://lorempixel.com/100/100/nature", :alt => ""}/ 
+            %td thumbnail.jpg
+            %td
+              %select
+                %option 3.5"x5" print (metallic)
+                %option 4"x5" print (metallic)
+                %option 5"x7" print
+            %td 
+              %select
+                %option Metalic
+                %option Glossy
+                %option Matte  
+            %td Price - fn factors the options
+            %td 
+              %input{:type => "text"}/ 
+            %td $2.00
+            %td 
+              %label{for: "checkbox1"}
+                %input#checkbox1{style: "display: none;", type: "checkbox"}/
+                %span.custom.checkbox
+                Add itme
+            %td 
+              %a{:href => "#"} Remove
+.row
+  .large-12.columns
+    %ul.button-group
+      %li
+        = link_to "Show cart", carts_show_path, class: "small button"
+      %li
+        = link_to "Proceed to Checkout", carts_checkout_path, class: "small button"

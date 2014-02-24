@@ -1,2 +1,59 @@
-%h1 Cart#show
-%p Find me in app/views/cart/show.html.haml
+.row
+  .large-12.columns
+    %h1 Cart#show
+.row
+  .large-9.columns
+    %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
+      %caption
+      %thead
+        %tr
+          %th{scope: "col"} Thumbnail
+          %th{scope: "col"} Image Name
+          %th{scope: "col"} Description
+          %th{scope: "col"} Finish
+          %th{scope: "col"} Price
+          %th{scope: "col"} Quantity
+          %th{scope: "col"} Total
+          %th{scope: "col"} &#160;
+          %th{scope: "col"} &#160;
+      %tbody
+        %tr
+          %td 
+            %img{:src => "http://lorempixel.com/100/100/nature", :alt => ""}/ 
+          %td thumbnail.jpg
+          %td 3.5"x5" print (metallic)
+          %td Glossy
+          %td Price - fn factors the options
+          %td 4
+          %td $2.00
+          %td 
+            = link_to "Edit", carts_edit_path
+          %td 
+            %a{:href => "#"} Remove
+        %tr
+          %td 
+            %img{:src => "http://lorempixel.com/100/100/nature", :alt => ""}/ 
+          %td thumbnail.jpg
+          %td 3.5"x5" print (metallic)
+          %td Glossy
+          %td Price - fn factors the options
+          %td 4
+          %td $2.00
+          %td 
+            = link_to "Edit", carts_edit_path
+          %td 
+            %a{:href => "#"} Remove
+  .large-3.columns
+    .panel
+      %h3 Order Summary
+      %p Items Subtotal
+      %br/ 
+      Shipping
+      %br/ 
+      Sales Tax
+      %p Total(Estimated...)
+      %br/ 
+      = link_to "Checkout", carts_checkout_path, class: "button small success"
+.row
+  .large-3.columns      
+    %img{:src => "https://www.evernote.com/shard/s8/nl/1543907/21d8ad9a-b700-4885-923a-fadc985a6653//res/30e0d558-d6ec-44a8-8f47-5c112f5c3e01/resource.jpg?resizeSmall&width=832", :alt => ""}/ 

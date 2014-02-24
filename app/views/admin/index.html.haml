@@ -1,334 +1,215 @@
-
-%h2 Dashboard
-%h3 Galleries
 .row
-  .section-container.auto{"data-section" => ""}
-    %section.active
-      %p.title{"data-section-title" => ""}
-        %a{href: "#panel1"} Client
-      .content{"data-section-content" => ""}
-        %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
-          %caption
-            Client
-          %thead
-            %tr
-              %th{scope: "col"} Client Name
-              %th{scope: "col"} Thumbnail
-              %th{scope: "col"} Type
-              %th{scope: "col"} # of images
-              %th{scope: "col"} Date Added
-              %th{scope: "col"} Published?
-              %th{scope: "col"} Comments
-              %th{scope: "col"} &#160;
-              %th{scope: "col"} &#160;
-              %th{scope: "col"} &#160;
-          %tbody
-            %tr
-              %td John Doe
-              %td thumbnail.jpg
-              %td Wedding
-              %td 33
-              %td 1/11/2011
-              %td Yes
-              %td Comments....
-              %td 
-                %a.tiny.button.success{href: "#"} Publish
-              %td 
-                %a.tiny.button.success{href: "#"} Edit
-              %td
-                %a.tiny.button.alert{href: "#"} Delete
-            %tr
-              %td Jane Doe
-              %td thumbnail.jpg
-              %td Portraiture
-              %td 100
-              %td 2/12/2014
-              %td No
-              %td comments...
-              %td 
-                %a.tiny.button.success{href: "#"} Publish
-              %td 
-                %a.tiny.button.success{href: "#"} Edit
-              %td
-                %a.tiny.button.alert{href: "#"} Delete
-            %tr
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-        = link_to "Create new Gallery", new_gallery_path, class: "small button success"
-    %section
-      %p.title{"data-section-title" => ""}
-        %a{href: "#panel2"} Portfolio
-      .content{"data-section-content" => ""}
-        %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
-          %caption
-            Portfolio
-          %thead
-            %tr
-              %th{scope: "col"} Name
-              %th{scope: "col"} Thumbnail
-              %th{scope: "col"} # of images
-              %th{scope: "col"} Date Added
-              %th{scope: "col"} Published?
-              %th{scope: "col"} Comments
-              %th{scope: "col"} &#160;
-              %th{scope: "col"} &#160;
-              %th{scope: "col"} &#160;
-          %tbody
-            %tr
-              %td XYZ
-              %td thumbnail.jpb
-              %td 33
-              %td 1/11/2011
-              %td Yes
-              %td One Awesome gallery
-              %td 
-                %a.tiny.button.success{href: "#"} Publish
-              %td 
-                %a.tiny.button.success{href: "#"} Edit
-              %td
-                %a.tiny.button.alert{href: "#"} Delete
-          %tbody
-        = link_to "Create new Gallery", new_gallery_path, class: "small button success"
+  .large-12.columns
+    %h2 Dashboard
+    %h3 Galleries
+    .section-container.auto{"data-section" => ""}
+      %section.active
+        %p.title{"data-section-title" => ""}
+          %a{href: "#panel1"} Client
+        .content{"data-section-content" => ""}
+          .section-container.auto{"data-section" => ""}
+            %section.active{"data-section-region" => ""}
+              %p.title{"data-section-title" => ""}
+                %a{href: "#panel1"} Published
+              .content{"data-section-content" => "", "data-slug" => "nested1"}
+                %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
+                  %caption
+                    Client
+                  %thead
+                    %tr
+                      %th{scope: "col"} Client Name
+                      %th{scope: "col"} Thumbnail
+                      %th{scope: "col"} Type
+                      %th{scope: "col"} # of images
+                      %th{scope: "col"} Date Added
+                      %th{scope: "col"} Published?
+                      %th{scope: "col"} Comments
+                      %th{scope: "col"} &#160;
+                      %th{scope: "col"} &#160;
+                      %th{scope: "col"} &#160;
+                  %tbody
+                    %tr
+                      %td John Doe
+                      %td thumbnail.jpg
+                      %td Wedding
+                      %td 33
+                      %td 1/11/2011
+                      %td Yes
+                      %td Comments....
+                      %td 
+                        %a.tiny.button.success{href: "#"} Unpublish
+                      %td 
+                        = link_to "Edit", galleries_client_path, class: "tiny button success"
+                      %td
+                        %a.tiny.button.alert{href: "#"} Delete
+            %section{"data-section-region" => ""}
+              %p.title{"data-section-title" => ""}
+                %a{href: "#panel1"} Unpublished
+              .content{"data-section-content" => "", "data-slug" => "nested1"}
+                %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
+                  %caption
+                    Client
+                  %thead
+                    %tr
+                      %th{scope: "col"} Client Name
+                      %th{scope: "col"} Thumbnail
+                      %th{scope: "col"} Type
+                      %th{scope: "col"} # of images
+                      %th{scope: "col"} Date Added
+                      %th{scope: "col"} Published?
+                      %th{scope: "col"} Comments
+                      %th{scope: "col"} &#160;
+                      %th{scope: "col"} &#160;
+                      %th{scope: "col"} &#160;
+                  %tbody
+                    %tr
+                      %td John Doe
+                      %td thumbnail.jpg
+                      %td Wedding
+                      %td 33
+                      %td 1/11/2011
+                      %td Yes
+                      %td Comments....
+                      %td 
+                        %a.tiny.button.success{href: "#"} Publish
+                      %td 
+                        = link_to "Edit", galleries_client_path, class: "tiny button success"
+                      %td
+                        %a.tiny.button.alert{href: "#"} Delete
+          = link_to "Create new Gallery", new_gallery_path, class: "small button success"
+      %section
+        %p.title{"data-section-title" => ""}
+          %a{href: "#panel2"} Portfolio
+        .content{"data-section-content" => ""}
+          .section-container.auto{"data-section" => ""}
+            %section.active{"data-section-region" => ""}
+              %p.title{"data-section-title" => ""}
+                %a{href: "#panel1"} Published
+              .content{"data-section-content" => "", "data-slug" => "nested1"}
+                %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
+                  %caption
+                    Client
+                  %thead
+                    %tr
+                      %th{scope: "col"} Client Name
+                      %th{scope: "col"} Thumbnail
+                      %th{scope: "col"} Type
+                      %th{scope: "col"} # of images
+                      %th{scope: "col"} Date Added
+                      %th{scope: "col"} Published?
+                      %th{scope: "col"} Comments
+                      %th{scope: "col"} &#160;
+                      %th{scope: "col"} &#160;
+                      %th{scope: "col"} &#160;
+                  %tbody
+                    %tr
+                      %td John Doe
+                      %td thumbnail.jpg
+                      %td Wedding
+                      %td 33
+                      %td 1/11/2011
+                      %td Yes
+                      %td Comments....
+                      %td 
+                        %a.tiny.button.success{href: "#"} Unpublish
+                      %td 
+                        = link_to "Edit", galleries_client_path, class: "tiny button success"
+                      %td
+                        %a.tiny.button.alert{href: "#"} Delete
+            %section{"data-section-region" => ""}
+              %p.title{"data-section-title" => ""}
+                %a{href: "#panel1"} Unpublished
+              .content{"data-section-content" => "", "data-slug" => "nested1"}
+                %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
+                  %caption
+                    Client
+                  %thead
+                    %tr
+                      %th{scope: "col"} Client Name
+                      %th{scope: "col"} Thumbnail
+                      %th{scope: "col"} Type
+                      %th{scope: "col"} # of images
+                      %th{scope: "col"} Date Added
+                      %th{scope: "col"} Published?
+                      %th{scope: "col"} Comments
+                      %th{scope: "col"} &#160;
+                      %th{scope: "col"} &#160;
+                      %th{scope: "col"} &#160;
+                  %tbody
+                    %tr
+                      %td John Doe
+                      %td thumbnail.jpg
+                      %td Wedding
+                      %td 33
+                      %td 1/11/2011
+                      %td Yes
+                      %td Comments....
+                      %td 
+                        %a.tiny.button.success{href: "#"} Publish
+                      %td 
+                        = link_to "Edit", galleries_client_path, class: "tiny button success"
+                      %td
+                        %a.tiny.button.alert{href: "#"} Delete
+          = link_to "Create new Gallery", new_gallery_path, class: "small button success"
 %hr/ 
-%h3 Work Orders
 .row
-  .section-container.auto{"data-section" => ""}
-    %section.active
-      %p.title{"data-section-title" => ""}
-        %a{href: "#panel1"} Active
-      .content{"data-section-content" => ""}
-        %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
-          %caption
-            Active
-          %thead
-            %tr
-              %th{scope: "col"} Name
-              %th{scope: "col"} Email
-              %th{scope: "col"} Address
-              %th{scope: "col"} Phone
-              %th{scope: "col"} Description
-              %th{scope: "col"} Job Type
-              %th{scope: "col"} Status
-              %th{scope: "col"} Date Opened
-              %th{scope: "col"} Comments
-              %th{scope: "col"} &#160;
-              %th{scope: "col"} &#160;
-              %th{scope: "col"} &#160;
-          %tbody
-            %tr
-              %td John Doe
-              %td jonhdoe@email.com
-              %td 33 abc st.
-              %td 555-555-5555
-              %td asf asdkfasdf
-              %td Wedding
-              %td Intake completed; Work Completed; Payment Received
-              %td 1/11/2011
-              %td comments....
-              %td 
-                %a.tiny.button.success{href: "#"} Send Invoice
-              %td 
-                %a.tiny.button.success{href: "#"} Edit
-              %td
-                %a.tiny.button.alert{href: "#"} Delete
-            %tr
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-            %tr
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-        = link_to "Create new Work Order", new_workorder_path, class: "small button success"
-    %section
-      %p.title{"data-section-title" => ""}
-        %a{href: "#panel2"} Completed
-      .content{"data-section-content" => ""}
-        %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
-          %caption
-            Completed
-          %thead
-            %tr
-              %th{scope: "col"} Name
-              %th{scope: "col"} Email
-              %th{scope: "col"} Address
-              %th{scope: "col"} Phone
-              %th{scope: "col"} Description
-              %th{scope: "col"} Job Type
-              %th{scope: "col"} Status
-              %th{scope: "col"} Date Opened
-              %th{scope: "col"} Comments
-              %th{scope: "col"} &#160;
-              %th{scope: "col"} &#160;
-              %th{scope: "col"} &#160;
-          %tbody
-            %tr
-              %td John Doe
-              %td jonhdoe@email.com
-              %td 33 abc st.
-              %td 555-555-5555
-              %td asf asdkfasdf
-              %td Wedding
-              %td Intake completed; Work Completed; Payment Received
-              %td 1/11/2011
-              %td comments....
-              %td 
-                %a.tiny.button.success{href: "#"} Reactivate
-              %td 
-                %a.tiny.button.success{href: "#"} Edit
-              %td
-                %a.tiny.button.alert{href: "#"} Delete
-            %tr
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-            %tr
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
+  .large-12.columns
+    %h3 Work Orders
+    %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all Work Orders", width: "100%"}
+      %caption
+      %thead
+        %tr
+          %th{scope: "col"} Order Date
+          %th{scope: "col"} Invoice #
+          %th{scope: "col"} Purchaser
+          %th{scope: "col"} Status
+          %th{scope: "col"} Amt
+          %th{scope: "col"} &#160;
+          %th{scope: "col"} &#160;
+          %th{scope: "col"} &#160;
+      %tbody
+        %tr
+          %td 1/11/2011
+          %td 
+            = link_to "123442", workorders_show_path
+          %td John Doe
+          %td Pending Payment / Pending Approval / other status
+          %td $55.00
+          %td 
+            %a.tiny.button.success{:href => ""} Other function
+          %td 
+            = link_to "Edit", workorders_edit_path, class: "tiny button success"
+          %td
+            %a.tiny.button.alert{href: "#"} Delete
+    = link_to "Create new Work Order", workorders_new_path, class: "small button success"
 %hr/ 
-%h3 Print Orders
 .row
-  .section-container.auto{"data-section" => ""}
-    %section.active
-      %p.title{"data-section-title" => ""}
-        %a{href: "#panel1"} Active
-      .content{"data-section-content" => ""}
-        %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
-          %caption
-            Active
-          %thead
-            %tr
-              %th{scope: "col"} Name
-              %th{scope: "col"} Email
-              %th{scope: "col"} Address
-              %th{scope: "col"} Phone
-              %th{scope: "col"} Description
-              %th{scope: "col"} Job Type
-              %th{scope: "col"} Status
-              %th{scope: "col"} Date Opened
-              %th{scope: "col"} Comments
-              %th{scope: "col"} &#160;
-              %th{scope: "col"} &#160;
-              %th{scope: "col"} &#160;
-          %tbody
-            %tr
-              %td John Doe
-              %td jonhdoe@email.com
-              %td 33 abc st.
-              %td 555-555-5555
-              %td asf asdkfasdf
-              %td Wedding
-              %td Intake completed; Work Completed; Payment Received
-              %td 1/11/2011
-              %td comments....
-              %td 
-                %a.tiny.button.success{href: "#"} Process credit card
-              %td 
-                %a.tiny.button.success{href: "#"} Edit
-              %td
-                %a.tiny.button.alert{href: "#"} Delete
-            %tr
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-            %tr
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-        = link_to "Create new Print Order", new_printorder_path, class: "small button success"
-    %section
-      %p.title{"data-section-title" => ""}
-        %a{href: "#panel2"} Completed
-      .content{"data-section-content" => ""}
-        %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
-          %caption
-            Completed
-          %thead
-            %tr
-              %th{scope: "col"} Name
-              %th{scope: "col"} Email
-              %th{scope: "col"} Address
-              %th{scope: "col"} Phone
-              %th{scope: "col"} Description
-              %th{scope: "col"} Job Type
-              %th{scope: "col"} Status
-              %th{scope: "col"} Date Opened
-              %th{scope: "col"} Comments
-              %th{scope: "col"} &#160;
-              %th{scope: "col"} &#160;
-              %th{scope: "col"} &#160;
-          %tbody
-            %tr
-              %td John Doe
-              %td jonhdoe@email.com
-              %td 33 abc st.
-              %td 555-555-5555
-              %td asf asdkfasdf
-              %td Wedding
-              %td Intake completed; Work Completed; Payment Received
-              %td 1/11/2011
-              %td comments....
-              %td 
-                %a.tiny.button.success{href: "#"} Reactivate
-              %td 
-                %a.tiny.button.success{href: "#"} Edit
-              %td
-                %a.tiny.button.alert{href: "#"} Delete
-            %tr
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-            %tr
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-              %td &#160;
-
-
+  .large-12.columns
+    %h3 Print Orders
+    %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of Print Orders", width: "100%"}
+      %caption
+      %thead
+        %tr
+          %th{scope: "col"} Order Date
+          %th{scope: "col"} Invoice #
+          %th{scope: "col"} Purchaser
+          %th{scope: "col"} Status
+          %th{scope: "col"} Amt
+          %th{scope: "col"} &#160;
+          %th{scope: "col"} &#160;
+          %th{scope: "col"} &#160;
+      %tbody
+        %tr
+          %td 1/11/2011
+          %td 
+            = link_to "123442", printorders_show_path
+          %td John Doe
+          %td Pending Payment / Pending Approval
+          %td $55.00
+          %td 
+            %a.tiny.button.success{:href => ""} Other function
+          %td 
+            = link_to "Edit", printorders_edit_path, class: "tiny button success"
+          %td
+            %a.tiny.button.alert{href: "#"} Delete
+    = link_to "Create new Print Order", printorders_new_path, class: "small button success"

@@ -19,4 +19,8 @@ class CartsController < ApplicationController
 
   def destroy
   end
+
+  def checkout
+  end
+  
 end

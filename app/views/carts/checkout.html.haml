@@ -1,0 +1,131 @@
+.row
+  .large-12.columns
+    %h3 checkout
+.row 
+  .large-9.columns
+    .row
+      .large-4.columns
+        %h4 Shipping Address
+      .large-2.large-offset-6.columns
+        %a{:href => "#"} Edit
+    .row
+      .large-12.columns
+        %p 
+          Randal Maile
+          %br>/
+          3469 Bandini Ave
+          %br/
+          Riverside, CA &#160;92506
+          %br/
+          United States
+          %br/
+    .row
+      .large-4.columns
+        %h4 Shipping Method
+        %div{style: "margin: 0 0 5px"}
+          %strong
+            1 Shipment - from [enter city shipped from]
+      .large-2.large-offset-6.columns
+        %a{:href => "#"} Edit
+    .row
+      .large-12.columns
+        %form.custom
+          %label{for: "radio1"}
+            %input#radio1{checked: "checked", name: "radio1", style: "display:none;", type: "radio"}/
+            %span.custom.radio.checked
+            UPS Next Day Air Saver (shipped in 1 business day) - $24.95
+          %label{for: "radio1"}
+            %input#radio1{name: "radio1", style: "display:none;", type: "radio"}/
+            %span.custom.radio
+            USPS First-Class Mail (shipped in 2-4 business days) - $3.95
+          %label{for: "radio1"}
+            %input#radio1{name: "radio1", style: "display:none;", type: "radio"}/
+            %span.custom.radio
+            UPS 2nd Day (shipped in 1 business day) - $12.95
+    .row
+      .large-12.columns
+        %a.button.success.small{:href => "#"} Continue 
+    .row
+      .large-4.columns
+        %h4 Billing Info
+        %p Your credit card info is not stored and will be used only for this purchase.
+      .large-2.large-offset-6.columns
+        %a{:href => "#"} Edit
+    .row
+      .large-12.columns
+        %form.custom 
+          .large-12.columns
+            %form
+              %fieldset
+                %legend Billing Address
+                %label{for: "radio1"}
+                  %input#radio1{name: "radio1", style: "display:none;", type: "radio"}/
+                  %span.custom.radio
+                  Copy shipping info
+                .row
+                  .large-6.columns
+                    %label Street address
+                    %input{type: "text"}/
+                .row
+                  .large-6.columns
+                    %label Street address (line 2)
+                    %input{:type => "text"}/ 
+                .row
+                  .large-6.columns
+                    %label City
+                    %input{:type => "text"}/ 
+                .row
+                  .large-6.columns
+                    %label City
+                    %input{:type => "text"}/ 
+                .row
+                  .large-6.columns
+                    %label State, Province, Region
+                    %input{:type => "text"}/ 
+                .row
+                  .large-6.columns
+                    %label Zip
+                    %input{:type => "text"}/ 
+                .row
+                  .large-7.columns
+                    %label Country
+                    %input{:type => "text"}/ 
+              %fieldset
+                %legend Credit Card info
+                .row
+                  .large-6.columns
+                    %label{for: "card_type"} Card Type
+                    %select#card_type.medium
+                      %option Visa
+                      %option Mastercard
+                      %option AMEX
+                .row
+                  .large-6.columns
+                    %label Card number
+                    %input{:type => "text"}/ 
+                .row
+                  .large-2.columns
+                    %label{for: "ex_month"} Exp month
+                    %select#ex_month.medium
+                      %option Jan
+                      %option Feb
+                      %option Mar
+                  .large-2.columns
+                    %label{for: "ex_year"} Exp Year
+                    %select#ex_year.medium
+                      %option 2013
+                      %option 2012
+                      %option 2011
+                .row
+                  .large-6.columns
+                    %label Security Code
+                    %input{:type => "text"}/ 
+  .large-3.columns
+    .panel
+      %h3 Order Summary
+      %p Items Subtotal
+      %br/ 
+      Shipping
+      %br/ 
+      Sales Tax
+      %p Total(Estimated...)

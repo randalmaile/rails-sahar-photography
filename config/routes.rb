@@ -1,4 +1,23 @@
 Saharphotography::Application.routes.draw do
+
+  get "photos/index"
+
+  get "photos/edit"
+
+  get "photos/show"
+
+  get "photos/new"
+
+  get "lightboxes/index"
+
+  get "lightboxes/show"
+
+  get "lightboxes/image_show"
+
+  get "lightboxes/edit"
+
+  get "lightboxes/new"
+
   get "workbench/lightbox"
 
   get "workbench/slideshow"
@@ -11,21 +30,37 @@ Saharphotography::Application.routes.draw do
 
   get "blog/index"
 
-  resources :printorders
-  resources :workorders
+  get "printorders/index"
+
+  get "printorders/show"
+
+  get "printorders/edit"
+
+  get "printorders/new"
+
+  get "workorders/index"
+
+  get "workorders/show"
+
+  get "workorders/edit"
+
+  get "workorders/new"
 
   get "admin/index"
+  get "admin/invoice"
 
   get "store/index"
 
-  resources :carts
-
+  get "carts/new"
+  get "carts/edit"
+  get "carts/show"
+  get "carts/checkout"
+  
   get "galleries/client"
-
   get "galleries/portfolio"
 
   resources :galleries
-  
+
   get "about/index"
 
   get "contact/index"
@@ -38,12 +73,11 @@ Saharphotography::Application.routes.draw do
   get "services/weddings"
   get "services/portrait"
   get "services/corporate"
-
-  
+  get "home/sitemap"
 
   root to: "home#index"
 
-  get "home/sitemap"
+
 
 
   # The priority is based upon order of creation:

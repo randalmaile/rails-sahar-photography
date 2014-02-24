@@ -1,0 +1,23 @@
+%form
+  %fieldset
+    %legend Edit Gallery
+    .row
+      .large-6.columns
+        %label Name
+        %input{placeholder: "Name", type: "text"}/
+    .row
+      .large-6.columns
+        %label Upload Images
+        %input{:type => "file_field"}/ 
+
+    .row
+      .large-4.columns
+        %label{for: "customDropdown1"} Gallery Type
+        %select#customDropdown1.medium
+          %option Client
+          %option Portfolio
+    .row 
+      .large-3.columns
+        %button{type: "submit"} Save
+
+

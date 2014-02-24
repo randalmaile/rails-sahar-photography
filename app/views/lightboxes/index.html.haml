@@ -1,0 +1,61 @@
+%h1 Lightboxes#index
+
+.row
+  .section-container.auto{"data-section" => ""}
+    %section.active
+      %p.title{"data-section-title" => ""}
+        %a{href: "#panel1"} My Lightboxes
+      .content{"data-section-content" => ""}
+        %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
+          %caption
+            Client
+            %tr
+              %th{scope: "col"} Lightbox Name
+              %th{scope: "col"} Client
+              %th{scope: "col"} # images
+              %th{scope: "col"} Created
+              %th{scope: "col"} &nbsp;
+              %th{scope: "col"} &nbsp;
+          %tbody
+            %tr
+              %td
+                = link_to "John Doe", lightboxes_show_path
+              %td John Doe
+              %td 33
+              %td 1/11/2011 
+              %td         
+                = link_to "Edit", lightboxes_edit_path, class: "tiny button success"
+              %td         
+                %a.tiny.button.alert{href: "#"} Delete
+        %h4 Create a New Lightbox
+        = link_to "Add Lightbox", lightboxes_new_path, class: "tiny button success"
+    %section
+      %p.title{"data-section-title" => ""}
+        %a{href: "#panel2"} ????
+      .content{"data-section-content" => ""}
+        %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
+          %caption
+            Portfolio
+          %thead
+            %tr
+              %th{scope: "col"} Lightbox Name
+              %th{scope: "col"} Client
+              %th{scope: "col"} # images
+              %th{scope: "col"} Created
+              %th{scope: "col"} Controls
+          %tbody
+            %tr
+              %td XYZ
+              %td thumbnail.jpb
+              %td 33
+              %td 1/11/2011
+              %td Yes
+              %td One Awesome gallery
+              %td 
+                %a.tiny.button.success{href: "#"} Publish
+              %td 
+                %a.tiny.button.success{href: "#"} Edit
+              %td
+                %a.tiny.button.alert{href: "#"} Delete
+          %tbody
+        = link_to "Create new Gallery", new_gallery_path, class: "small button success"

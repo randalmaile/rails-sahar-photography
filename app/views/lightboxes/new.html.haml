@@ -1,0 +1,19 @@
+%h1 Lightboxes#new
+%form
+  %fieldset
+    %legend New Lightbox
+    .row
+      .large-6.columns
+        %label Lightbox Name
+        %input{placeholder: "Name", type: "text"}/
+    .row
+      .large-6.columns
+        %label Client
+        %input{:type => "text"}/ 
+    .row
+      .large-6.columns
+        %label # images
+        %input{:type => "text"}/ 
+    .row 
+      .large-3.columns
+        %button{type: "submit"} Create

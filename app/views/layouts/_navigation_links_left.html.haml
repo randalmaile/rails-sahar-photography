@@ -1,0 +1,36 @@
+%li.divider
+  %li.has-dropdown
+    %a{href: "#"} Galleries
+    %ul.dropdown
+      %li
+        %a{href: "#"} Gallery X
+      %li
+        %a{href: "#"} Gallery Y
+      %li
+        %a{href: "#"} Gallery Z
+  %li.divider
+  %li.has-dropdown
+    %a{href: "#"} Services
+    %ul.dropdown
+      %li
+        = link_to "Weddings", services_weddings_path
+      %li
+        = link_to "Portrait", services_portrait_path
+      %li
+        = link_to "Corporate", services_corporate_path
+  %li.divider
+  %li
+    = link_to "Blog", blog_index_path
+  %li.divider
+  %li.has-dropdown
+    = link_to "Contact", contact_index_path
+    %ul.dropdown
+      %li
+        = link_to "Photoshoot", contact_photoshoot_path
+      %li
+        = link_to "Mailing List", contact_mailinglist_path
+  %li.divider 
+  %li 
+    = link_to "About", about_index_path
+  %li 
+    = link_to "Store", store_index_path 

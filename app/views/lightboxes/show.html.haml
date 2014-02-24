@@ -1,0 +1,60 @@
+.row
+  .large-12.columns
+    %h1 Lightboxes#show
+.row
+  .large-12.columns
+    %form.custom
+      %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
+        %caption
+        %thead
+          %tr
+            %th{scope: "col"} Thumbnail
+            %th{scope: "col"} Image Name
+            %th{scope: "col"} Description
+            %th{scope: "col"} Resolution
+            %th{scope: "col"} Purchase prints
+            %th{scope: "col"} Download full-res
+            %th{scope: "col"} &#160;
+        %tbody
+          %tr
+            %td 
+              %img{:src => "http://lorempixel.com/100/100/nature", :alt => ""}/ 
+            %td thumbnail.jpg
+            %td A cool photo
+            %td 3433 X 3422 
+            %td 
+              %label{for: "purchase"}
+                %input#purchase{style: "display: none;", type: "checkbox"}/
+                %span.custom.checkbox
+                Purchase print
+            %td 
+              %label{for: "purchase"}
+                %input#purchase{style: "display: none;", type: "checkbox"}/
+                %span.custom.checkbox
+                Downlaod
+            %td 
+          %tr
+            %td 
+              %img{:src => "http://lorempixel.com/100/100/nature", :alt => ""}/ 
+            %td thumbnail.jpg
+            %td A cool photo
+            %td 3433 X 3422 
+            %td 
+              %label{for: "purchase"}
+                %input#purchase{style: "display: none;", type: "checkbox"}/
+                %span.custom.checkbox
+                Purchase print
+            %td 
+              %label{for: "purchase"}
+                %input#purchase{style: "display: none;", type: "checkbox"}/
+                %span.custom.checkbox
+                Downlaod
+            %td 
+.row
+  .large-12.columns
+    %ul.button-group
+      %li
+        = link_to "Select Printing Options", carts_new_path, class: "small button"
+      %li
+        %a.small.button{href: "#"} Download
+

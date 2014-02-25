@@ -38,8 +38,7 @@
                       %td Comments....
                       %td 
                         %a.tiny.button.success{href: "#"} Unpublish
-                      %td 
-                        = link_to "Edit", galleries_client_path, class: "tiny button success"
+                      %td= link_to "Edit", galleries_client_path, class: "tiny button success"
                       %td
                         %a.tiny.button.alert{href: "#"} Delete
             %section{"data-section-region" => ""}
@@ -72,8 +71,7 @@
                       %td Comments....
                       %td 
                         %a.tiny.button.success{href: "#"} Publish
-                      %td 
-                        = link_to "Edit", galleries_client_path, class: "tiny button success"
+                      %td= link_to "Edit", galleries_client_path, class: "tiny button success"
                       %td
                         %a.tiny.button.alert{href: "#"} Delete
           = link_to "Create new Gallery", new_gallery_path, class: "small button success"
@@ -112,8 +110,7 @@
                       %td Comments....
                       %td 
                         %a.tiny.button.success{href: "#"} Unpublish
-                      %td 
-                        = link_to "Edit", galleries_client_path, class: "tiny button success"
+                      %td= link_to "Edit", galleries_client_path, class: "tiny button success"
                       %td
                         %a.tiny.button.alert{href: "#"} Delete
             %section{"data-section-region" => ""}
@@ -146,8 +143,7 @@
                       %td Comments....
                       %td 
                         %a.tiny.button.success{href: "#"} Publish
-                      %td 
-                        = link_to "Edit", galleries_client_path, class: "tiny button success"
+                      %td= link_to "Edit", galleries_client_path, class: "tiny button success"
                       %td
                         %a.tiny.button.alert{href: "#"} Delete
           = link_to "Create new Gallery", new_gallery_path, class: "small button success"
@@ -159,29 +155,34 @@
       %caption
       %thead
         %tr
-          %th{scope: "col"} Order Date
-          %th{scope: "col"} Invoice #
-          %th{scope: "col"} Purchaser
+          %th{scope: "col"} Order ID
+          %th{scope: "col"} Customer Name
+          %th{scope: "col"} Email
+          %th{scope: "col"} Phone
+          %th{scope: "col"} Job Type
+          %th{scope: "col"} Description
+          %th{scope: "col"} Event Date
+          %th{scope: "col"} Quoted Price
           %th{scope: "col"} Status
-          %th{scope: "col"} Amt
           %th{scope: "col"} &#160;
           %th{scope: "col"} &#160;
           %th{scope: "col"} &#160;
       %tbody
-        %tr
-          %td 1/11/2011
-          %td 
-            = link_to "123442", workorders_show_path
-          %td John Doe
-          %td Pending Payment / Pending Approval / other status
-          %td $55.00
-          %td 
-            %a.tiny.button.success{:href => ""} Other function
-          %td 
-            = link_to "Edit", workorders_edit_path, class: "tiny button success"
-          %td
-            %a.tiny.button.alert{href: "#"} Delete
-    = link_to "Create new Work Order", workorders_new_path, class: "small button success"
+      - @workorders.each do |workorder|
+        %tr 
+          %td= link_to workorder.id, workorder
+          %td= workorder.name
+          %td= workorder.email
+          %td= workorder.phone
+          %td= workorder.jobtype
+          %td= workorder.description
+          %td= workorder.eventdate
+          %td= workorder.quotedprice
+          %td= workorder.orderstatus
+          %td= link_to "Show", workorder, class: "tiny button success" 
+          %td= link_to "Edit", edit_workorder_path(workorder), class: "tiny button success"
+          %td= link_to "Delete", {:controller => "workorders", :action => "destroy", :id => workorder.id}, method: :delete, class: 'tiny button alert', confirm: 'Are you sure you want to delete this workorder?'
+    = link_to "Create new Work Order", new_workorder_path, class: "small button success"
 %hr/ 
 .row
   .large-12.columns
@@ -201,15 +202,13 @@
       %tbody
         %tr
           %td 1/11/2011
-          %td 
-            = link_to "123442", printorders_show_path
+          %td= link_to "123442", printorders_show_path
           %td John Doe
           %td Pending Payment / Pending Approval
           %td $55.00
           %td 
             %a.tiny.button.success{:href => ""} Other function
-          %td 
-            = link_to "Edit", printorders_edit_path, class: "tiny button success"
+          %td= link_to "Edit", printorders_edit_path, class: "tiny button success"
           %td
             %a.tiny.button.alert{href: "#"} Delete
     = link_to "Create new Print Order", printorders_new_path, class: "small button success"

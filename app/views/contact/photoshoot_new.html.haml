@@ -1,0 +1,36 @@
+.row
+  .large-12.columns
+    = form_for @workorder, :url => {action: 'photoshoot_create', controller: 'contact'} do |f|
+      %fieldset
+        %legend Request a photoshoot
+        .row
+          .large-6.columns
+            = f.label :name, "Name"
+            = f.text_field :name
+        .row
+          .large-6.columns
+            = f.label :email, "Email"
+            = f.text_field :email
+        .row
+          .large-6.columns
+            = f.label :phone, "Phone"
+            = f.text_field :phone
+        .row
+          .large-4.columns
+            = f.label :eventdate, "Date"
+            = f.text_field :eventdate
+        .row
+          .large-4.columns
+            = f.label :jobtype, "Jobtype"
+            = f.select :jobtype, options_for_select([["Select One", ""], "Wedding", "Portrait", "Corporate"])
+        .row
+          .large-12.columns
+            = f.label :description, "Description"
+            = f.text_area :description, rows: 3
+        .row
+          .large-12.columns
+            = f.label :comments, "Comments"
+            = f.text_area :comments
+        .row 
+          .large-3.columnsa
+            = f.submit "Submit", class: 'button'

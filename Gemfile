@@ -37,8 +37,8 @@ group :production do
 end
 
 group :test do
-  gem 'capybara'
-  gem 'database_cleaner', '1.0.1'
+  gem "capybara", "~> 2.2.1"
+  gem 'database_cleaner'
   gem 'email_spec'
 end
 

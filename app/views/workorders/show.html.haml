@@ -3,23 +3,22 @@
   .large-6.columns
     .panel
       %h5 Customer Information
-      %p 
-        Randal Maile
-        %br/  
-        3469 Bandini Ave
+      %p
+        = @workorder.name
+        %br/
+        = mail_to @workorder.email
         %br/ 
-        Riverside, Ca
+        = @workorder.phone  
         %br/ 
-        USA
+        = @workorder.address
         %br/ 
-        92506
+        #{@workorder.city}, #{@workorder.state} &nbsp; #{@workorder.zip}
         %br/ 
-        858-717-1052
-
+        = @workorder.country
   .large-6.columns
     .panel.callout.radius
       %h5 This is a callout panel.
-      %p It's a little ostentatious, but useful for important content.
+      %p Maybe list more details about the status of the workorder
 
 %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
   %caption
@@ -28,20 +27,21 @@
       %th{scope: "col"} Date Opened
       %th{scope: "col"} Job Type
       %th{scope: "col"} Description
-      %th{scope: "col"} Status
+      %th{scope: "col"} Event Date
+      %th{scope: "col"} Quoted Price
+      %th{scope: "col"} Order Status
       %th{scope: "col"} Comments
-      %th{scope: "col"} Quote
-      %th{scope: "col"} &#160;
       %th{scope: "col"} &#160;
       %th{scope: "col"} &#160;
   %tbody
     %tr
-      %td 1/11/2011
-      %td Wedding
-      %td A wedding with ....
-      %td Payment Pending
-      %td Comments Comments Comments Comments Comments Comments
-      %td $3499.00
+      %td [Need to fill in - capture from DB??]
+      %td= @workorder.jobtype
+      %td= @workorder.description
+      %td= @workorder.eventdate
+      %td= @workorder.quotedprice
+      %td= @workorder.orderstatus
+      %td= @workorder.comments
 %a.tiny.button.success{href: "#"} Send Invoice
-
-%a.tiny.button.alert{href: "#"} Delete
+= link_to "Edit", edit_workorder_path(@workorder), class: "tiny button success"
+= link_to "Delete", @workorder, method: :delete, class: 'tiny button alert', confirm: 'Are you sure you want to delete this workorder?'

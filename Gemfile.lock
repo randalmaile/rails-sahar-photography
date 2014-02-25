@@ -61,7 +61,7 @@ GEM
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
     daemons (1.1.9)
-    database_cleaner (1.0.1)
+    database_cleaner (1.2.0)
     debug_inspector (0.0.2)
     devise (3.2.2)
       bcrypt-ruby (~> 3.0)
@@ -220,10 +220,10 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   cancan
-  capybara
+  capybara (~> 2.2.1)
   coffee-rails (~> 3.2.1)
   compass-rails
-  database_cleaner (= 1.0.1)
+  database_cleaner
   devise
   email_spec
   factory_girl_rails

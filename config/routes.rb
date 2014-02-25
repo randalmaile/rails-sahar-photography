@@ -38,13 +38,7 @@ Saharphotography::Application.routes.draw do
 
   get "printorders/new"
 
-  get "workorders/index"
-
-  get "workorders/show"
-
-  get "workorders/edit"
-
-  get "workorders/new"
+  resources :workorders, except: :index
 
   get "admin/index"
   get "admin/invoice"
@@ -64,8 +58,9 @@ Saharphotography::Application.routes.draw do
   get "about/index"
 
   get "contact/index"
-
-  get "contact/photoshoot"
+  get "contact/confirmation"
+  match "contact/photoshoot", to: "contact#photoshoot_new", via: :get
+  match "contact/photoshoot", to: "contact#photoshoot_create", via: :post
 
   get "contact/mailinglist"
 

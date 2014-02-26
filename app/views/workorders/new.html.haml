@@ -2,6 +2,12 @@
   .large-12.columns
     %h3 New Work Order
     = form_for @workorder do |f|
+      - if @workorder.errors.any?
+        .alert.alert-box
+          %h4= "There are #{pluralize(bookmark.errors.count, "error")}"
+          %ul 
+            - bookmark.errors.full_messages.each do |msg|
+              %li= msg 
       %fieldset 
         %legend Customer Contact Info
         .row
@@ -41,7 +47,7 @@
         .row
           .large-4.columns
             = f.label :jobtype, "Job Type"
-            = f.select :jobtype, options_for_select([["Select One", ""], "Wedding", "Portrait", "Corporate"])
+            = f.select :jobtype, ["Wedding", "Portrait", "Corporate"], include_blank: 'Select type of photoshoot'
         .row
           .large-12.columns
             = f.label :description, "Description"
@@ -57,7 +63,7 @@
         .row
           .large-4.columns
             = f.label :orderstatus, "Order Status"
-            = f.select :orderstatus, options_for_select([["Select One", ""], "Client intake", "Quoted price", "Actively shooting", "Completed"]) 
+            = f.select :orderstatus, ["Client intake", "Quoted price", "Actively shooting", "Completed"], include_blank: 'Set Order Status'
         .row
           .large-12.columns
             = f.label :comments, "Comments"

@@ -5,3 +5,7 @@
 @import "foundation/components/dropdown-buttons";
 
 /* Insert layout specific sass styles here - need to figure out how to add foundation mixins and variables!!*/
+.columns.date select {
+  float: left; 
+  width: 30%;
+}

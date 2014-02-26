@@ -1,6 +1,12 @@
 .row
   .large-12.columns
     = form_for @workorder, :url => {action: 'photoshoot_create', controller: 'contact'} do |f|
+      - if @workorder.errors.any?
+        .alert.alert-box
+          %h4= "There are #{pluralize(@workorder.errors.count, "error")}"
+          %ul 
+            - @workorder.errors.full_messages.each do |msg|
+              %li= msg 
       %fieldset
         %legend Request a photoshoot
         .row
@@ -16,13 +22,14 @@
             = f.label :phone, "Phone"
             = f.text_field :phone
         .row
-          .large-4.columns
+          .large-4.columns.date
             = f.label :eventdate, "Date"
-            = f.text_field :eventdate
+            = date_select("workorder", "eventdate", :order => [:day, :month, :year])
+            /= f.text_field :eventdate
         .row
           .large-4.columns
             = f.label :jobtype, "Jobtype"
-            = f.select :jobtype, options_for_select([["Select One", ""], "Wedding", "Portrait", "Corporate"])
+            = f.select :jobtype, ["Wedding", "Portrait", "Corporate"], include_blank: 'Select type of photoshoot'
         .row
           .large-12.columns
             = f.label :description, "Description"

@@ -7,4 +7,8 @@ class PrintordersController < ApplicationController
 
   def edit
   end
+
+  def checkout
+  end
+  
 end

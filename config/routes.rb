@@ -31,12 +31,13 @@ Saharphotography::Application.routes.draw do
   get "blog/index"
 
   get "printorders/index"
-
   get "printorders/show"
-
   get "printorders/edit"
-
   get "printorders/new"
+  get "printorders/checkout"
+  get "printorders/editCarts"
+  get "printorders/newCarts"
+  get "printorders/showCarts"
 
   resources :workorders, except: :index
 
@@ -44,11 +45,6 @@ Saharphotography::Application.routes.draw do
   get "admin/invoice"
 
   get "store/index"
-
-  get "carts/new"
-  get "carts/edit"
-  get "carts/show"
-  get "carts/checkout"
   
   get "galleries/client"
   get "galleries/portfolio"

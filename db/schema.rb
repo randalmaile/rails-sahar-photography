@@ -11,7 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140225192922) do
+ActiveRecord::Schema.define(:version => 20140226235736) do
+
+  create_table "photos", :force => true do |t|
+    t.string   "title"
+    t.date     "dateshot"
+    t.string   "size"
+    t.string   "resolution"
+    t.string   "photourl"
+    t.string   "clientname"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "workitems", :force => true do |t|
+    t.date     "eventdate"
+    t.decimal  "unitprice"
+    t.string   "jobtype"
+    t.text     "description"
+    t.integer  "workorder_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "workitems", ["workorder_id"], :name => "index_workitems_on_workorder_id"
 
   create_table "workorders", :force => true do |t|
     t.string   "name"

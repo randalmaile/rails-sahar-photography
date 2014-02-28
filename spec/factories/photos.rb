@@ -2,11 +2,12 @@
 
 FactoryGirl.define do
   factory :photo do
-    title "MyString"
-    dateshot "2014-02-26"
+    imagename "MyString"
+    dateshot "2014-02-28"
     size "MyString"
     resolution "MyString"
-    photourl "MyString"
+    imageurl "MyString"
     clientname "MyString"
+    published ""
   end
 end

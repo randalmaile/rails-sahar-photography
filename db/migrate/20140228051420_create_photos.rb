@@ -1,12 +1,13 @@
 class CreatePhotos < ActiveRecord::Migration
   def change
     create_table :photos do |t|
-      t.string :title
+      t.string :imagename
       t.date :dateshot
       t.string :size
       t.string :resolution
-      t.string :photourl
+      t.string :imageurl
       t.string :clientname
+      t.boolean :published
 
       t.timestamps
     end

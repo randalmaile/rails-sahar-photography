@@ -1,31 +1,27 @@
 Saharphotography::Application.routes.draw do
+ 
+
+  namespace :admin do
+    get "index"
+    get "invoice"
+    resources :printitems
+  end
 
   get "photos/index"
-
   get "photos/edit"
-
   get "photos/show"
-
   get "photos/new"
 
   get "lightboxes/index"
-
   get "lightboxes/show"
-
   get "lightboxes/image_show"
-
   get "lightboxes/edit"
-
   get "lightboxes/new"
 
   get "workbench/lightbox"
-
   get "workbench/slideshow"
-
   get "workbench/tables"
-
   get "workbench/buttons"
-
   get "workbench/index"
 
   get "blog/index"
@@ -40,9 +36,6 @@ Saharphotography::Application.routes.draw do
   get "printorders/showCarts"
 
   resources :workorders, except: :index
-
-  get "admin/index"
-  get "admin/invoice"
 
   get "store/index"
   
@@ -67,9 +60,6 @@ Saharphotography::Application.routes.draw do
   get "home/sitemap"
 
   root to: "home#index"
-
-
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

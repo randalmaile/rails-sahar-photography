@@ -11,15 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140227000538) do
+ActiveRecord::Schema.define(:version => 20140228051936) do
 
   create_table "photos", :force => true do |t|
-    t.string   "title"
+    t.string   "imagename"
     t.date     "dateshot"
     t.string   "size"
     t.string   "resolution"
-    t.string   "photourl"
+    t.string   "imageurl"
     t.string   "clientname"
+    t.boolean  "published"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -30,9 +31,32 @@ ActiveRecord::Schema.define(:version => 20140227000538) do
     t.string   "dimensions"
     t.string   "papertype"
     t.decimal  "unitprice"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "printorder_id"
   end
+
+  add_index "printitems", ["printorder_id"], :name => "index_printitems_on_printorder_id"
+
+  create_table "printorders", :force => true do |t|
+    t.string   "title"
+    t.string   "email"
+    t.string   "phone"
+    t.text     "description"
+    t.text     "comments"
+    t.string   "status"
+    t.string   "clientname"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "printorders_photos", :id => false, :force => true do |t|
+    t.integer "printorder_id"
+    t.integer "photo_id"
+  end
+
+  add_index "printorders_photos", ["photo_id"], :name => "index_printorders_photos_on_photo_id"
+  add_index "printorders_photos", ["printorder_id", "photo_id"], :name => "index_printorders_photos_on_printorder_id_and_photo_id"
 
   create_table "workitems", :force => true do |t|
     t.date     "eventdate"

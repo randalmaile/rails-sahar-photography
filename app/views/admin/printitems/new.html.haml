@@ -1,0 +1,16 @@
+.row
+  .large-12.columns
+    = form_for @printitem, :url => {action: 'new', controller: 'admin/printitems'} do |f|
+      %fieldset 
+        %legend sdfa
+        .row
+          .large-6.columns
+            = f.label :dimensions, "Dimensions"
+            = f.text_field :dimensions
+        .row
+          .large-6.columns
+            = f.label :finish, "Attribute"
+            = f.select :finish, finish_options, include_blank: "Select your print finsh"
+
+
+  

@@ -1,93 +1,81 @@
-%h1 Printorders#new
-%p Find me in app/views/printorders/new.html.haml%h1 Create a work order
-%form
-  %fieldset
-    %legend Customer Details
-    .row
-      .large-6.columns
-        %label Name
-        %input{type: "text"}/
-    .row
-      .large-6.columns
-        %label Email
-        %input{:type => "text"}/ 
-    .row
-      .large-6.columns
-        %label Address
-        %input{:type => "text"}/ 
-    .row
-      .large-6.columns
-        %label City
-        %input{:type => "text"}/ 
-    .row
-      .large-6.columns
-        %label State, Province, Region
-        %input{:type => "text"}/ 
-    .row
-      .large-6.columns
-        %label Zip
-        %input{:type => "text"}/ 
-    .row
-      .large-7.columns
-        %label Country
-        %input{:type => "text"}/ 
-    .row
-      .large-6.columns
-        %label Phone
-        %input{:type => "text"}/ 
-    .row
-      .large-12.columns
-        %label Customer Notes
-        %textarea{placeholder: "Please describe..."}
-    .row
-      .large-12.columns
-        %label Comments
-        %textarea{placeholder: "Any comments...."}
-%form
-  %fieldset
-    %legend Photoset
-    .row
-      .large-6.columns
-        %label Image
-        %input{type: "text"}/
-    .row
-      .large-6.columns
-        %label Quantity
-        %input{:type => "text"}/ 
-    .row
-      .large-6.columns
-        %label Filename
-        %input{:type => "text"}/ 
-    .row
-      .large-6.columns
-        %label File Size
-        %input{:type => "text"}/ 
-    .row
-      .large-6.columns
-        %label Description
-        %input{:type => "text"}/ 
-    .row
-      .large-6.columns
-        %label Print Size
-        %input{:type => "text"}/ 
-    .row
-      .large-7.columns
-        %label Finish
-        %input{:type => "text"}/ 
-%form
-  %fieldset
-    %legend Shipping Details
-    .row
-      .large-6.columns
-        %label Shipping Method
-        %input{type: "text"}/
-    .row 
-      .large-3.columns
-        %button{type: "submit"} Create
-
-
-
-
-
-
-
+.row
+  .large-12.columns
+    %h3 Choose your print options
+.row
+  .large-12.columns
+    %form.custom
+      %table{border: "0", cellpadding: "0", cellspacing: "0", summary: "A list of all galleries", width: "100%"}
+        %caption
+        %thead
+          %tr
+            %th{scope: "col"} Preview
+            %th{scope: "col"} Image Name
+            %th{scope: "col"} Description
+            %th{scope: "col"} Finish
+            %th{scope: "col"} Price
+            %th{scope: "col"} Quantity
+            %th{scope: "col"} Total
+            %th{scope: "col"}
+              %label{for: "checkbox1"}
+                %input#checkbox1{style: "display: none;", type: "checkbox"}/
+                %span.custom.checkbox
+                Add all
+            %th{scope: "col"} Remove
+        %tbody
+          %tr
+            %td 
+              %img{:src => "http://lorempixel.com/100/100/nature", :alt => ""}/ 
+            %td thumbnail.jpg
+            %td
+              %select
+                %option 3.5"x5" print (metallic)
+                %option 4"x5" print (metallic)
+                %option 5"x7" print
+            %td 
+              %select
+                %option Metalic
+                %option Glossy
+                %option Matte  
+            %td Price - fn factors the options
+            %td 
+              %input{:type => "text"}/ 
+            %td $2.00
+            %td 
+              %label{for: "checkbox1"}
+                %input#checkbox1{style: "display: none;", type: "checkbox"}/
+                %span.custom.checkbox
+                Add item
+            %td 
+              %a{:href => "#"} Remove
+          %tr
+            %td 
+              %img{:src => "http://lorempixel.com/100/100/nature", :alt => ""}/ 
+            %td thumbnail.jpg
+            %td
+              %select
+                %option 3.5"x5" print (metallic)
+                %option 4"x5" print (metallic)
+                %option 5"x7" print
+            %td 
+              %select
+                %option Metalic
+                %option Glossy
+                %option Matte  
+            %td Price - fn factors the options
+            %td 
+              %input{:type => "text"}/ 
+            %td $2.00
+            %td 
+              %label{for: "checkbox1"}
+                %input#checkbox1{style: "display: none;", type: "checkbox"}/
+                %span.custom.checkbox
+                Add itme
+            %td 
+              %a{:href => "#"} Remove
+.row
+  .large-12.columns
+    %ul.button-group
+      %li
+        = link_to "Show cart", printorders_show_path, class: "small button"
+      %li
+        = link_to "Proceed to Checkout", printorders_checkout_path, class: "small button"
